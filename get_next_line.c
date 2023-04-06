@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/06 16:29:26 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/06 16:32:32 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,17 @@ static void	free_ptr(char **ptr)
 
 static char	*read_file(char *temp, int fd, char *buffer)
 {
-	size_t i;
+	size_t	i;
 
 	i = 1;
-	while (i && !ft_strchr (temp,  '\n'))
+	while (i && !ft_strchr (temp, '\n'))
 	{
-
 	}
 }
 
 char	*get_next_line(int fd)
 {
-	static char 	*temp[OPEN_MAX];
+	static char		*temp[OPEN_MAX];
 	char			*buffer;
 
 	if (fd == -1 || BUFFER_SIZE < 1)
