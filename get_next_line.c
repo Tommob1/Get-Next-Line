@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/06 13:45:30 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/06 13:55:51 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	free_ptr(char **ptr)
 
 char	*get_next_line(int fd)
 {
-	char	*buffer;
-	char	*out;
+	char		*buffer;
+	char		*out;
 	static char	*buffcpy[OPEN_LIMIT];
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_LIMIT)
@@ -32,5 +32,4 @@ char	*get_next_line(int fd)
 		return (0);
 	if (!buffcpy[fd])
 		buffcpy[fd] = ft_strdup("");
-
 }
