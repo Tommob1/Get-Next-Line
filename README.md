@@ -6,6 +6,9 @@ Example expected output:
 test.txt
 
 this
+
 is
+
 a
+
 test
