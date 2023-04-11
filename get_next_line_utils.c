@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/11 11:13:06 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/11 11:44:05 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -59,28 +59,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	}
 	ptr[b] = '\0';
 	return (ptr);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*str;
-	size_t	s1_len;
-	size_t	s2_len;
-
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	str = NULL;
-	if (!s1 || !s2)
-		return (0);
-	else
-	{
-		str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
-		if (!str)
-			return (0);
-		ft_strlcpy(str, s1, s1_len + 1);
-		ft_strlcpy(str + (s1_len), s2, s2_len + 1);
-	}
-	return (str);
 }
 
 char	*ft_strjoin_free(char *temp, const char *buf)
