@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/06 13:45:12 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/11 11:03:54 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -81,6 +81,29 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ft_strlcpy(str + (s1_len), s2, s2_len + 1);
 	}
 	return (str);
+}
+
+char *ft_strjoin_free(char *temp, const char *buf)
+{
+	char *new_temp;
+	char *new_temp_ptr;
+	char *temp_ptr;
+
+	new_temp = malloc((ft_strlen(temp) + ft_strlen(buf) + 1));
+	if (!new_temp)
+	{
+		free (temp);
+		return (0);
+	}
+	new_temp_ptr = new_temp;
+	temp_ptr = temp;
+	while (*temp_ptr)
+		*new_temp_ptr++ = *ptr_to_temp++;
+	while (*buf)
+		*new_temp_ptr++ = *buf++;
+	*new_temp_ptr = 0;
+	free (temp);
+	return (new_temp);
 }
 
 char	*ft_strdup(const char *s1)
