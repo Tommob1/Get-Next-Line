@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/11 11:03:54 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/11 11:13:06 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -83,11 +83,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-char *ft_strjoin_free(char *temp, const char *buf)
+char	*ft_strjoin_free(char *temp, const char *buf)
 {
-	char *new_temp;
-	char *new_temp_ptr;
-	char *temp_ptr;
+	char	*new_temp;
+	char	*new_temp_ptr;
+	char	*temp_ptr;
 
 	new_temp = malloc((ft_strlen(temp) + ft_strlen(buf) + 1));
 	if (!new_temp)
