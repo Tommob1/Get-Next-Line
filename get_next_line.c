@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/11 11:52:49 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/11 11:55:42 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	free_ptr(char **ptr)
 
 static char	*next(char **temp)
 {
-	char *s;
-	char *ptr;
+	char	*s;
+	char	*ptr;
 
 	ptr = *temp;
 }
