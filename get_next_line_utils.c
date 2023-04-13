@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/11 11:44:05 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/13 10:15:51 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -76,7 +76,7 @@ char	*ft_strjoin_free(char *temp, const char *buf)
 	new_temp_ptr = new_temp;
 	temp_ptr = temp;
 	while (*temp_ptr)
-		*new_temp_ptr++ = *ptr_to_temp++;
+		*new_temp_ptr++ = *temp_ptr++;
 	while (*buf)
 		*new_temp_ptr++ = *buf++;
 	*new_temp_ptr = 0;
