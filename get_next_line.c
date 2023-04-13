@@ -6,18 +6,12 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 11:16:25 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:21:10 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <unistd.h>
-
-static void	free_ptr(char **ptr)
-{
-	free(*ptr);
-	*ptr = NULL;
-}
 
 static char	*next(char **temp)
 {
