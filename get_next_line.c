@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 10:42:22 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:16:25 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,16 @@ static char	*next(char **temp)
 	while (*ptr && *ptr != '\n')
 		++ptr;
 	ptr += (*ptr == '\n');
-	line = ft_substr(*temp, 0, (size_t)(ptr - *temp));
+	s = ft_substr(*temp, 0, (size_t)(ptr - *temp));
+	if (!s)
+	{
+		free (*temp);
+		return (0);
+	}
+	ptr = ft_substr(ptr, 0, ft_strlen(ptr));
+	free (*temp);
+	*temp = ptr;
+	return (s);
 }
 
 static char	*read_file(char *temp, int fd, char *buffer)
@@ -38,28 +47,28 @@ static char	*read_file(char *temp, int fd, char *buffer)
 	i = 1;
 	while (i && !ft_strchr (temp, '\n'))
 	{
-		r = read (fd, bufffer, BUFFER_SIZE);
-		if (r == -1)
+		i = read (fd, buffer, BUFFER_SIZE);
+		if (i == -1)
 		{
 			free (buffer);
 			free (temp);
 			return (0);
 		}
-		buffer[r] = 0;
+		buffer[i] = 0;
 		temp = ft_strjoin_free(temp, buffer);
 		if (!temp)
 		{
-			free (buf);
+			free (buffer);
 			return (0);
 		}
 	}
-	free (buf);
+	free (buffer);
 	return (temp);
 }
 
 char	*get_next_line(int fd)
 {
-	static char		*temp[OPEN_MAX];
+	static char		*temp[OPEN_LIMIT];
 	char			*buffer;
 
 	if (fd == -1 || BUFFER_SIZE < 1)
