@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 11:29:06 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:44:49 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -23,8 +23,8 @@ size_t	ft_strlen(const char *s)
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t a;
-	size_t b;
+	size_t	a;
+	size_t	b;
 
 	a = -1;
 	b = ft_strlen(s);
