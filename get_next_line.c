@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/11 11:55:42 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/13 10:42:22 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ static char	*next(char **temp)
 	char	*ptr;
 
 	ptr = *temp;
+	while (*ptr && *ptr != '\n')
+		++ptr;
+	ptr += (*ptr == '\n');
+	line = ft_substr(*temp, 0, (size_t)(ptr - *temp));
 }
 
 static char	*read_file(char *temp, int fd, char *buffer)
