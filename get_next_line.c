@@ -6,13 +6,14 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 12:44:11 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/14 15:38:25 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <unistd.h>
 
+/*Next:*/
 static char	*next(char **temp)
 {
 	char	*s;
@@ -34,6 +35,7 @@ static char	*next(char **temp)
 	return (s);
 }
 
+/*Read_file:*/
 static char	*read_file(char *temp, int fd, char *buffer)
 {
 	ssize_t	i;
@@ -60,6 +62,7 @@ static char	*read_file(char *temp, int fd, char *buffer)
 	return (temp);
 }
 
+/*Get_next_line:*/
 char	*get_next_line(int fd)
 {
 	static char		*temp[OPEN_LIMIT];
