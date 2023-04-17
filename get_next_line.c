@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/17 15:38:50 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:51:07 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ static char	*next(char **temp)
 	return (s);
 }
 
-/*Read_file:*/
+/*Read_file: Reads the contents of a file 'fd' and appends the read data
+ * to a given string 'temp' */
 static char	*read_file(char *temp, int fd, char *buffer)
 {
 	ssize_t	i;
