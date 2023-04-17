@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/17 15:51:07 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:55:28 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 static char	*next(char **temp)
 {
+	char	*s;
 	char	*ptr;
 
 	ptr = *temp;
