@@ -6,17 +6,21 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/14 15:38:25 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:38:50 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <unistd.h>
 
-/*Next:*/
+/*Next: Extracts next line from a given string, stores to **temp.
+ * Finds position of the newline character or the end of the string.
+ * Creates new substring 's' containing the characters from the start
+ * of the string up to the newline character.
+ * Updates original string '*temp' then returns 's'. */
+
 static char	*next(char **temp)
 {
-	char	*s;
 	char	*ptr;
 
 	ptr = *temp;
