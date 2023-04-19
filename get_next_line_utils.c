@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:26:49 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 12:44:49 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:12:29 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -63,6 +63,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
+/*Function joins two strings and returns the result.
+  Frees the memory allocated to the input string 'temp':*/
 char	*ft_strjoin_free(char *temp, const char *buf)
 {
 	char	*new_temp;
