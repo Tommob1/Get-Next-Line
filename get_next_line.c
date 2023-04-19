@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/17 15:55:28 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:44:07 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <unistd.h>
 
 /*Next: Extracts next line from a given string, stores to **temp.
- * Finds position of the newline character or the end of the string.
- * Creates new substring 's' containing the characters from the start
- * of the string up to the newline character.
- * Updates original string '*temp' then returns 's'. */
+  Finds position of the newline character or the end of the string.
+  Creates new substring 's' containing the characters from the start
+  of the string up to the newline character.
+  Updates original string '*temp' then returns 's'. */
 
 static char	*next(char **temp)
 {
@@ -41,7 +41,10 @@ static char	*next(char **temp)
 }
 
 /*Read_file: Reads the contents of a file 'fd' and appends the read data
- * to a given string 'temp' */
+ to a given string 'temp' in chunks of 'BUFFER_SIZE' using a temporary 
+ buffer 'buffer'. It stops reading when it encounters a newline char or
+ reaches the end of the file. */
+
 static char	*read_file(char *temp, int fd, char *buffer)
 {
 	ssize_t	i;
