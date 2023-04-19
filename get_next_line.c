@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:25:41 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/19 14:44:07 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:03:28 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,13 @@ static char	*read_file(char *temp, int fd, char *buffer)
 	return (temp);
 }
 
-/*Get_next_line:*/
+/*Get_next_line: Main function. Takes int 'fd', checks if the file descriptor 
+  is valid and if the 'BUFFER_SIZE' is greater than or equal to 1.
+  Allocates a buffer of size 'BUFFER_SIZE + 1' and reads the file using
+  'read_file'. After reading the file, it calls 'next' to extract the
+  next line from the updated string in 'temp[fd]'. Once there are no
+  more lines to read, it frees the allocated memory and returns 0*/
+
 char	*get_next_line(int fd)
 {
 	static char		*temp[OPEN_LIMIT];
