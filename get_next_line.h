@@ -6,9 +6,12 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:27:22 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/13 11:14:17 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:06:17 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*'ifndef' acts as a guard to ensure the macros have not yet been defined.
+ If they haven't been defined, the code below the guards will run. */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
