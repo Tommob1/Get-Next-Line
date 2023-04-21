@@ -6,7 +6,7 @@
 /*   By: btomlins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:27:22 by btomlins          #+#    #+#             */
-/*   Updated: 2023/04/20 16:06:17 by btomlins         ###   ########.fr       */
+/*   Updated: 2023/04/21 15:50:52 by btomlins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,16 @@
 #  define BUFFER_SIZE 1024
 # endif
 
+/*OPEN_LIMIT represents the maximum number of open file descriptors*/
+
 # ifndef OPEN_LIMIT
 #  define OPEN_LIMIT 254
 # endif
 
 char	*get_next_line(int fd);
 
-/* UTIL FUNCTS */
+/* UTIL FUNCTS prototypes, referenced from get_next_line_utils.c,
+   to be used in main.*/
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin_free(char *temp, const char *buf);
